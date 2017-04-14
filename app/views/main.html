@@ -1,0 +1,184 @@
+<div data-page="main" class="page navbar-fixed with-subnavbar">
+
+  <!-- Top Navbar-->
+  <div class="navbar">
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="#" class="link icon-only show-tab-profile">
+          <span class="user_image">
+            <img src="http://lorempixel.com/200/200/food" alt="">
+          </span>
+          <span>Mitchel</span>
+        </a>
+        </div>
+        <div class="center"></div>
+        <div class="right">
+          <a href="#" class="link balance">
+            <span>Balance:$</span><p id="balance"></p>
+          </a>
+        </div>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title">
+      <div class="searchbar-input">
+          <input type="search" placeholder="Search">
+          <a href="#" class="searchbar-clear"></a>
+      </div>
+      <a href="#" class="searchbar-cancel">Cancel</a>
+  </form>
+  
+  <!-- Search Bar overlay-->
+  <div class="searchbar-overlay"></div>
+
+    <div class="page-content main-content">
+      <div class="content-block searchbar-not-found">
+              Nothing found
+      </div>
+    <!-- Tabs-->
+    <div class="buttons-row">
+      <!-- Link to 1st tab, active -->
+      <a href="#contacts" class="button tab-link active button-fill">Contacts</a>
+      <!-- Link to 2nd tab -->
+      <a href="#businesses" class="button tab-link">Businesses</a>
+      <!-- Link to 3rd tab -->
+      <a href="#transactions" class="button tab-link">Transactions</a>
+      <!-- Link to 4th tab -->
+      <a href="#profile" class="button tab-link show-profile">Profile</a>
+    </div>
+      <!-- Tabs swipeable wrapper, required to switch tabs with swipes -->
+    <div class="tabs-swipeable-wrap">
+      <!-- Tabs, tabs wrapper -->
+      <div class="tabs">
+        <!-- Tab 1, active by default -->
+        <div id="contacts" class="tab active ">
+
+         <div class="content-block-title">Favorite</div>
+            <div class="list-block media-list list-block-search searchbar-found">
+              <ul id="favorites">
+<!--                 <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="dir/img/i-f7-ios.png" width="30"></div>
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Mitchel Pawirodinomo</div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="dir/img/i-f7-ios.png" width="30"></div>
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Simon Noerdjan</div>
+                      </div>
+                    </div>
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+            <div class="content-block-title">All</div>
+            <div class="list-block list-block-search searchbar-found">
+              <ul id="nonfavorites">
+<!--                 <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Agon Emanuel</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Timothy Pocorni</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Jonathan Tobi</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Agon Emanuel</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Timothy Pocorni</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Jonathan Tobi</div>
+                    </div>
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+        </div>
+        <!-- Tab 2 -->
+        <div id="businesses" class="page-content tab">
+          <div class="list-block media-list list-block-search searchbar-found">
+            <ul id="appended_bussinesses">
+<!--               <li>
+                <a href="#" class="item-link">
+                  <div class="item-content">
+                    <div class="item-media"><img src="dir/img/i-f7-ios.png" width="30"></div>
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Marsha's broden</div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+        <!-- Tab 3 -->
+        <div id="transactions" class="page-content tab">
+            <div class="list-block accordion-list list-block-search searchbar-found">
+              <ul id="appended_transactions">
+<!--                 <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><b>Timothy Pocorni</b>
+                        <div class="item-subtitle">12/10/2016</div>
+                      </div>
+                      <div class="item-after">$0.05</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                      Agon Emanuel heeft $.05 voor Timothy Pocorni
+                    </div>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+        </div>
+        <!-- Tab 4 -->
+       <div id="profile" class="page-content tab">
+            <div class="list-block accordion-list">
+        <ul id="appended_profile">
+          <!-- Text inputs -->
+        </ul>
+<!--         <div class="content-block">
+        <p class=""><a href="#" class="button button-fill back">Back</a></p>
+        </div> -->
+      </div>
+    </div>
+      </div>
+    </div>
+
+</div>
+

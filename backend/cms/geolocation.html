@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+    <script>
+      $.get('http://gocodeops.com/hackathon2016_api/index.php/userdata/', 
+      function(data){
+      data = jQuery.parseJSON(data);
+      var locations = [];
+
+      $.each(data, function(i, value){
+        phonenumber = value.phonenumber;
+        latitude = value.latitude;
+        longitude = value.longitude;
+        locations.push([phonenumber, latitude, longitude])
+      });
+      console.log(locations);
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 7,
+        center: new google.maps.LatLng(4.418028, -55.109356),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var infowindow = new google.maps.InfoWindow();
+      var marker, i;
+      var markers = new Array();
+      for (i = 0; i < locations.length; i++) { 
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map
+        });
+        markers.push(marker);
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            infowindow.setContent(locations[i][0]);
+            infowindow.open(map, marker);
+          }
+        })(marker, i));
+      }
+    });
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcde_jzYp3mBH469gVXZUuskJiB9bxp7c">
+    </script>
+  </body>
+</html>

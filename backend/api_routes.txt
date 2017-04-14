@@ -1,0 +1,124 @@
+
+HOST LINK!!!!
+http://gocodeops.com/hackathon2016_api/index.php
+
+Users:
+
+Route: /users/
+Type: GET
+Info: Gaat alle users informatie pakken
+
+Route: /user/:id/
+Type: GET
+Info: gaat alleen info pakken van de id die gegeven is in de route
+
+Route: /user/
+Type: POST
+Info: Maakt een nieuwe user
+Data:
+#usertype
+#firstname
+#lastname
+#number
+#pin
+
+Route: /login/
+Type: POST
+Info: Inloggen van gebruikers
+Data:
+#number
+#pin
+
+
+
+
+
+
+
+
+
+
+
+Transactions:
+
+Route: /transaction/
+Type: POST
+Info: Voor het maken van een nieuwe transaction
+Data:
+#sender
+#receiver
+#amount
+
+Route: /transactions/
+Type: GET
+Info: Hier ga je alle informatie krijgen van alle transactions (voor Admin)
+
+Route: /transaction/:id/
+Type: GET
+Info: heeft een id nodig, dit gaat transactions pakken van een sender (voor de gebruiker om te zien naar hoeveel mensen hij heeft gestuurd, wie en wanneer)
+
+
+
+
+
+
+
+
+Companies:
+
+Route: /companies/
+Type: GET
+Info: Trekt alle companies informatie
+
+Route: /company/:id/
+Type: GET
+Info: neemt company by $id
+
+
+
+
+
+
+User Data:
+
+Route: /userdata/
+Type: GET
+Info: Trekt alle userdata informatie
+
+Route: /userdata/
+Type: POST
+Info: post data in het tabel
+#carriername
+#phonenumber
+#networktype
+#latitude
+#longtitude
+
+
+
+
+
+
+
+Friends & Favorites:
+
+Route: /friends/:id/
+Type: GET
+Info: Trekt alle friends van een persoon
+
+Route: /favorites/:id/
+Type: GET
+Info: Trekt alle favo friends van een persoon
+
+Route: /friend/:number/
+Type: GET
+Info: neemt de id van de gebruiker die zoeen nummer heeft
+
+Route: /friend/
+Type: POST
+Info: maken van een nieuwe friend
+Data:
+#user_id
+#friend_id
+
+
